@@ -8,7 +8,9 @@
     "npm:@unocss/preset-web-fonts@~0.65.1": "0.65.1",
     "npm:@unocss/reset@~0.65.1": "0.65.1",
     "npm:solid-js@^1.9.3": "1.9.3_seroval@1.1.1",
+    "npm:solid-motionone@^1.0.2": "1.0.2_solid-js@1.9.3__seroval@1.1.1",
     "npm:unocss@~0.65.1": "0.65.1",
+    "npm:vinxi@*": "0.5.1_@babel+core@7.26.0_@types+node@22.5.4",
     "npm:vinxi@0.5.1": "0.5.1_@babel+core@7.26.0_@types+node@22.5.4",
     "npm:vinxi@~0.5.1": "0.5.1_@babel+core@7.26.0_@types+node@22.5.4"
   },
@@ -549,6 +551,52 @@
         "tar@7.4.3"
       ]
     },
+    "@motionone/animation@10.18.0": {
+      "integrity": "sha512-9z2p5GFGCm0gBsZbi8rVMOAJCtw1WqBTIPw3ozk06gDvZInBPIsQcHgYogEJ4yuHJ+akuW8g1SEIOpTOvYs8hw==",
+      "dependencies": [
+        "@motionone/easing",
+        "@motionone/types",
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/dom@10.18.0": {
+      "integrity": "sha512-bKLP7E0eyO4B2UaHBBN55tnppwRnaE3KFfh3Ps9HhnAkar3Cb69kUCJY9as8LrccVYKgHA+JY5dOQqJLOPhF5A==",
+      "dependencies": [
+        "@motionone/animation",
+        "@motionone/generators",
+        "@motionone/types",
+        "@motionone/utils",
+        "hey-listen",
+        "tslib"
+      ]
+    },
+    "@motionone/easing@10.18.0": {
+      "integrity": "sha512-VcjByo7XpdLS4o9T8t99JtgxkdMcNWD3yHU/n6CLEz3bkmKDRZyYQ/wmSf6daum8ZXqfUAgFeCZSpJZIMxaCzg==",
+      "dependencies": [
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/generators@10.18.0": {
+      "integrity": "sha512-+qfkC2DtkDj4tHPu+AFKVfR/C30O1vYdvsGYaR13W/1cczPrrcjdvYCj0VLFuRMN+lP1xvpNZHCRNM4fBzn1jg==",
+      "dependencies": [
+        "@motionone/types",
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/types@10.17.1": {
+      "integrity": "sha512-KaC4kgiODDz8hswCrS0btrVrzyU2CSQKO7Ps90ibBVSQmjkrt2teqta6/sOG59v7+dPnKMAg13jyqtMKV2yJ7A=="
+    },
+    "@motionone/utils@10.18.0": {
+      "integrity": "sha512-3XVF7sgyTSI2KWvTf6uLlBJ5iAgRgmvp3bpuOiQJvInd4nZ19ET8lX5unn30SlmRH7hXbBbH+Gxd0m0klJ3Xtw==",
+      "dependencies": [
+        "@motionone/types",
+        "hey-listen",
+        "tslib"
+      ]
+    },
     "@netlify/functions@2.8.2": {
       "integrity": "sha512-DeoAQh8LuNPvBE4qsKlezjKj0PyXDryOFJfJKo3Z1qZLKzQ21sT314KQKPVjfvw6knqijj+IO+0kHXy/TJiqNA==",
       "dependencies": [
@@ -824,6 +872,32 @@
     },
     "@sindresorhus/merge-streams@2.3.0": {
       "integrity": "sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg=="
+    },
+    "@solid-primitives/props@3.1.11_solid-js@1.9.3__seroval@1.1.1": {
+      "integrity": "sha512-jZAKWwvDRHjiydIumDgMj68qviIbowQ1ci7nkEAgzgvanNkhKSQV8iPgR2jMk1uv7S2ZqXYHslVQTgJel/TEyg==",
+      "dependencies": [
+        "@solid-primitives/utils",
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/refs@1.0.8_solid-js@1.9.3__seroval@1.1.1": {
+      "integrity": "sha512-+jIsWG8/nYvhaCoG2Vg6CJOLgTmPKFbaCrNQKWfChalgUf9WrVxWw0CdJb3yX15n5lUcQ0jBo6qYtuVVmBLpBw==",
+      "dependencies": [
+        "@solid-primitives/utils",
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/transition-group@1.0.5_solid-js@1.9.3__seroval@1.1.1": {
+      "integrity": "sha512-G3FuqvL13kQ55WzWPX2ewiXdZ/1iboiX53195sq7bbkDbXqP6TYKiadwEdsaDogW5rPnPYAym3+xnsNplQJRKQ==",
+      "dependencies": [
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/utils@6.2.3_solid-js@1.9.3__seroval@1.1.1": {
+      "integrity": "sha512-CqAwKb2T5Vi72+rhebSsqNZ9o67buYRdEJrIFzRXz3U59QqezuuxPsyzTSVCacwS5Pf109VRsgCJQoxKRoECZQ==",
+      "dependencies": [
+        "solid-js"
+      ]
     },
     "@solidjs/meta@0.29.4_solid-js@1.9.3__seroval@1.1.1": {
       "integrity": "sha512-zdIWBGpR9zGx1p1bzIPqF5Gs+Ks/BH8R6fWhmUa/dcK1L2rUC8BAcZJzNRYBQv74kScf1TSOs0EY//Vd/I0V8g==",
@@ -2081,6 +2155,9 @@
         "function-bind"
       ]
     },
+    "hey-listen@1.0.8": {
+      "integrity": "sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q=="
+    },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
     },
@@ -3029,6 +3106,18 @@
         "seroval-plugins"
       ]
     },
+    "solid-motionone@1.0.2_solid-js@1.9.3__seroval@1.1.1": {
+      "integrity": "sha512-nMdfTZND5FzZSD5gcaSmjjgF7aldMmk4PHC88rUSSdUcrCP/LlVl0xMoy/qncQihgkqHRW0ywewbpE/+ToEibA==",
+      "dependencies": [
+        "@motionone/dom",
+        "@motionone/utils",
+        "@solid-primitives/props",
+        "@solid-primitives/refs",
+        "@solid-primitives/transition-group",
+        "csstype",
+        "solid-js"
+      ]
+    },
     "solid-refresh@0.6.3_solid-js@1.9.3__seroval@1.1.1": {
       "integrity": "sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==",
       "dependencies": [
@@ -3690,6 +3779,7 @@
         "npm:@unocss/preset-web-fonts@~0.65.1",
         "npm:@unocss/reset@~0.65.1",
         "npm:solid-js@^1.9.3",
+        "npm:solid-motionone@^1.0.2",
         "npm:unocss@~0.65.1",
         "npm:vinxi@~0.5.1"
       ]

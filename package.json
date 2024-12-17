@@ -7,6 +7,7 @@
     "@unocss/preset-web-fonts": "^0.65.1",
     "@unocss/reset": "^0.65.1",
     "solid-js": "^1.9.3",
+    "solid-motionone": "^1.0.2",
     "unocss": "^0.65.1",
     "vinxi": "^0.5.1"
   }

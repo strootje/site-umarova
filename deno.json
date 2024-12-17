@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "dev": "vinxi dev"
+    "dev": "vinxi dev",
+    "build": "vinxi build"
   },
   "nodeModulesDir": "auto",
   "compilerOptions": {

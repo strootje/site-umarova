@@ -1,5 +1,6 @@
 import { action, query } from "@solidjs/router";
-import { createResource, Show, Suspense } from "solid-js";
+import { createResource, createSignal, Show, Suspense } from "solid-js";
+import { Motion } from "solid-motionone";
 
 type Question = {
   question: string;
@@ -8,7 +9,7 @@ type Question = {
 
 const getAllQuestions = query(
   async () => {
-    const resp = await fetch("http://localhost:3000/data/questions.json");
+    const resp = await fetch("/data/questions.json");
     const result = (await resp.json()) as { data: Array<Question> };
     return result.data;
   },
@@ -21,7 +22,20 @@ export default function HomePage() {
     return questions.at(Math.floor(Math.random() * questions.length));
   });
 
-  const submitQuestion = action(async () => {
+  const [errorImage, setErrorImage] = createSignal<string>();
+
+  const submitQuestion = action(async (question: Question, data: FormData) => {
+    const userInput = data.get("user_input") ?? "";
+
+    if (question.answer !== userInput) {
+      const random = Math.floor(Math.random() * 8) + 1;
+
+      setErrorImage(`images/error${random}.jpg`);
+
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      setErrorImage(undefined);
+    }
+
     refetch();
   }, "submit:question");
 
@@ -30,7 +44,7 @@ export default function HomePage() {
       <Suspense>
         <Show when={question()}>
           {(data) => (
-            <>
+            <div class="flex flex-col items-center gap-4 w-full md:max-w-1/2 text-center">
               <div>{data().question}</div>
 
               <form
@@ -38,23 +52,36 @@ export default function HomePage() {
                 method="post"
               >
                 <input
-                  class="w-full b-2 b-solid b-stone-600"
+                  name="user_input"
+                  class="px-4 py-2 rounded w-full b-2 b-min b-solid"
+                  placeholder="Vul hier je antwoord in"
                   value={data().answer}
                   type="text"
                 />
 
                 <button
-                  class="bg-min px-2 py-1 rounded text-white"
-                  formAction={submitQuestion}
+                  class="bg-min px-4 py-2 rounded text-white"
+                  formAction={submitQuestion.with(data())}
                   type="submit"
                 >
                   Klik volgende
                 </button>
               </form>
-            </>
+            </div>
           )}
         </Show>
       </Suspense>
+
+      <Show when={errorImage()}>
+        {(src) => (
+          <Motion.img
+            class="top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2"
+            animate={{ opacity: [0, 1, 0, 1, 0, 1, 0, 1, 0, 1] }}
+            transition={{ duration: 3, easing: "linear" }}
+            src={src()}
+          />
+        )}
+      </Show>
     </main>
   );
 }

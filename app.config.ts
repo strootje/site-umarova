@@ -1,14 +1,15 @@
 import { defineConfig } from "@solidjs/start/config";
-import {default as unocss} from "unocss/vite";
+import { default as unocss } from "unocss/vite";
+import type { Plugin } from "vinxi";
 
 export default defineConfig({
-  ssr: true,
-  
+  ssr: false,
+
   server: {
-    preset: 'github-pages'
+    preset: "github-pages",
   },
 
   vite: {
-    plugins: [unocss()]
-  }
+    plugins: [unocss() as Plugin[]],
+  },
 });
