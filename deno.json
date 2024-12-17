@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "dev": "vinxi dev"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js",
+    "lib": ["deno.ns", "dom", "dom.iterable", "dom.asynciterable"],
+    "types": ["vinxi/types/client", "@solidjs/start/env"]
+  },
+  "imports": {
+    "~/": "./src/"
+  }
+}
