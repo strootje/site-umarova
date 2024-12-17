@@ -8,6 +8,7 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <base href="https://strootje.github.io/site-umarova/" />
           <link rel="icon" href="/favicon.ico" />
           {assets}
         </head>
