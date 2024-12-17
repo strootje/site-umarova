@@ -7,6 +7,7 @@ export default defineConfig({
 
   server: {
     preset: "github-pages",
+    baseURL: "https://strootje.github.io/site-umarova",
   },
 
   vite: {
