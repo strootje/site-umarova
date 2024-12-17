@@ -1,0 +1,51 @@
+{
+  "_action-BXh-FJoP.js": {
+    "file": "assets/action-BXh-FJoP.js",
+    "name": "action",
+    "imports": [
+      "_routing-DR7ZU3F0.js"
+    ]
+  },
+  "_routing-DR7ZU3F0.js": {
+    "file": "assets/routing-DR7ZU3F0.js",
+    "name": "routing"
+  },
+  "src/routes/(pages).tsx?pick=default&pick=$css": {
+    "file": "assets/(pages)-CMMybR50.js",
+    "name": "(pages)",
+    "src": "src/routes/(pages).tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_routing-DR7ZU3F0.js"
+    ]
+  },
+  "src/routes/(pages)/(homepage).tsx?pick=default&pick=$css": {
+    "file": "assets/(homepage)-DCFAR6_C.js",
+    "name": "(homepage)",
+    "src": "src/routes/(pages)/(homepage).tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_routing-DR7ZU3F0.js",
+      "_action-BXh-FJoP.js"
+    ]
+  },
+  "virtual:$vinxi/handler/client": {
+    "file": "assets/client-GCS9tLJs.js",
+    "name": "client",
+    "src": "virtual:$vinxi/handler/client",
+    "isEntry": true,
+    "imports": [
+      "_routing-DR7ZU3F0.js",
+      "_action-BXh-FJoP.js"
+    ],
+    "dynamicImports": [
+      "src/routes/(pages).tsx?pick=default&pick=$css",
+      "src/routes/(pages)/(homepage).tsx?pick=default&pick=$css"
+    ],
+    "css": [
+      "assets/client-B2xq9as2.css"
+    ]
+  }
+}
