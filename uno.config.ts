@@ -5,6 +5,8 @@ export default defineConfig({
   theme: {
     colors: {
       min: "#144273",
+      purple1: "#452270",
+      purple2: "#F7F5FE",
     },
   },
 

@@ -40,34 +40,38 @@ export default function HomePage() {
   }, "submit:question");
 
   return (
-    <main class="flex flex-col items-center bg-gradient-to-b from-blue-200 to-white p-8 w-full grow">
+    <main class="flex flex-col items-center bg-purple2 p-8 w-full grow">
       <Suspense>
         <Show when={question()}>
           {(data) => (
-            <div class="flex flex-col items-center gap-4 w-full md:max-w-1/2 text-center">
-              <div>{data().question}</div>
+            <>
+              <span class="bg-purple1 text-white">asdads</span>
 
-              <form
-                class="flex flex-col items-center gap-2 w-full"
-                method="post"
-              >
-                <input
-                  name="user_input"
-                  class="px-4 py-2 rounded w-full b-2 b-min b-solid"
-                  placeholder="Vul hier je antwoord in"
-                  value={data().answer}
-                  type="text"
-                />
+              <div class="flex flex-col items-center gap-4 w-full md:max-w-1/2 text-center">
+                <div>{data().question}</div>
 
-                <button
-                  class="bg-min px-4 py-2 rounded text-white"
-                  formAction={submitQuestion.with(data())}
-                  type="submit"
+                <form
+                  class="flex flex-col items-center gap-2 w-full"
+                  method="post"
                 >
-                  Klik volgende
-                </button>
-              </form>
-            </div>
+                  <input
+                    name="user_input"
+                    class="px-4 py-2 rounded w-full b-2 b-min b-solid"
+                    placeholder="Vul hier je antwoord in"
+                    value={data().answer}
+                    type="text"
+                  />
+
+                  <button
+                    class="bg-min px-4 py-2 rounded text-white"
+                    formAction={submitQuestion.with(data())}
+                    type="submit"
+                  >
+                    Klik volgende
+                  </button>
+                </form>
+              </div>
+            </>
           )}
         </Show>
       </Suspense>
