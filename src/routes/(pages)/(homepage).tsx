@@ -9,7 +9,7 @@ type Question = {
 
 const getAllQuestions = query(
   async () => {
-    const resp = await fetch("/data/questions.json");
+    const resp = await fetch("/site-umarova/data/questions.json");
     const result = (await resp.json()) as { data: Array<Question> };
     return result.data;
   },
@@ -30,7 +30,7 @@ export default function HomePage() {
     if (question.answer !== userInput) {
       const random = Math.floor(Math.random() * 8) + 1;
 
-      setErrorImage(`images/error${random}.jpg`);
+      setErrorImage(`/site-umarova/images/error${random}.jpg`);
 
       await new Promise((resolve) => setTimeout(resolve, 3000));
       setErrorImage(undefined);

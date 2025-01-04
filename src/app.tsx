@@ -9,6 +9,7 @@ import "virtual:uno.css";
 export default function App() {
   return (
     <Router
+      base="/site-umarova/"
       root={(props) => (
         <MetaProvider>
           <Suspense>{props.children}</Suspense>
