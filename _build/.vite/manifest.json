@@ -21,7 +21,7 @@
     ]
   },
   "src/routes/(pages)/(homepage).tsx?pick=default&pick=$css": {
-    "file": "assets/(homepage)-DCFAR6_C.js",
+    "file": "assets/(homepage)-CFqqPh0g.js",
     "name": "(homepage)",
     "src": "src/routes/(pages)/(homepage).tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -32,7 +32,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-CE-6O9hi.js",
+    "file": "assets/client-DJDA8DfH.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
