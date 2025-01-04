@@ -7,6 +7,8 @@
     "npm:@types/node@*": "22.5.4",
     "npm:@unocss/preset-web-fonts@~0.65.1": "0.65.1",
     "npm:@unocss/reset@~0.65.1": "0.65.1",
+    "npm:markdown@0.5": "0.5.0",
+    "npm:marked@^15.0.5": "15.0.5",
     "npm:solid-js@^1.9.3": "1.9.3_seroval@1.1.1",
     "npm:solid-motionone@^1.0.2": "1.0.2_solid-js@1.9.3__seroval@1.1.1",
     "npm:unocss@~0.65.1": "0.65.1",
@@ -546,7 +548,7 @@
         "detect-libc@2.0.3",
         "https-proxy-agent",
         "node-fetch",
-        "nopt",
+        "nopt@8.0.0",
         "semver@7.6.3",
         "tar@7.4.3"
       ]
@@ -1308,6 +1310,9 @@
     },
     "@vue/shared@3.5.13": {
       "integrity": "sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ=="
+    },
+    "abbrev@1.1.1": {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
     },
     "abbrev@2.0.0": {
       "integrity": "sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ=="
@@ -2471,6 +2476,15 @@
         "source-map-js"
       ]
     },
+    "markdown@0.5.0": {
+      "integrity": "sha512-ctGPIcuqsYoJ493sCtFK7H4UEgMWAUdXeBhPbdsg1W0LsV9yJELAHRsMmWfTgao6nH0/x5gf9FmsbxiXnrgaIQ==",
+      "dependencies": [
+        "nopt@2.1.2"
+      ]
+    },
+    "marked@15.0.5": {
+      "integrity": "sha512-xN+kSuqHjxWg+Q47yhhZMUP+kO1qHobvXkkm6FX+7N6lDvanLDd8H7AQ0jWDDyq+fDt/cSrJaBGyWYHXy0KQWA=="
+    },
     "mdn-data@2.12.2": {
       "integrity": "sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA=="
     },
@@ -2676,10 +2690,16 @@
     "node-releases@2.0.19": {
       "integrity": "sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw=="
     },
+    "nopt@2.1.2": {
+      "integrity": "sha512-x8vXm7BZ2jE1Txrxh/hO74HTuYZQEbo8edoRcANgdZ4+PCV+pbjd/xdummkmjjC7LU5EjPzlu8zEq/oxWylnKA==",
+      "dependencies": [
+        "abbrev@1.1.1"
+      ]
+    },
     "nopt@8.0.0": {
       "integrity": "sha512-1L/fTJ4UmV/lUxT2Uf006pfZKTvAgCF+chz+0OgBHO8u2Z67pE7AaAUUj7CJy0lXqHmymUvGFt6NE9R3HER0yw==",
       "dependencies": [
-        "abbrev"
+        "abbrev@2.0.0"
       ]
     },
     "normalize-path@3.0.0": {
@@ -3778,6 +3798,7 @@
         "npm:@solidjs/start@^1.0.10",
         "npm:@unocss/preset-web-fonts@~0.65.1",
         "npm:@unocss/reset@~0.65.1",
+        "npm:marked@^15.0.5",
         "npm:solid-js@^1.9.3",
         "npm:solid-motionone@^1.0.2",
         "npm:unocss@~0.65.1",

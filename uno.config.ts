@@ -16,7 +16,7 @@ export default defineConfig({
       provider: "none",
 
       fonts: {
-        ro: "RO-SansWebText-Regular",
+        rijksoverheid: "RO-SansWebText-Regular",
       },
 
       processors: createLocalFontProcessor({
