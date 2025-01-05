@@ -1,13 +1,6 @@
 import { action, query, redirect, useParams } from "@solidjs/router";
-import {
-  createResource,
-  createSignal,
-  Match,
-  Show,
-  Suspense,
-  Switch,
-} from "solid-js";
-import { MultipleFormControl } from "~/components/form-controls/multiple.tsx";
+import { createResource, createSignal, Show, Suspense } from "solid-js";
+import { FormControl } from "~/components/form-control.tsx";
 import { Marked } from "~/components/marked.tsx";
 import { Question } from "~/models.ts";
 
@@ -41,26 +34,30 @@ export default function QuestionByIdPage() {
     <Suspense>
       <Show when={question()}>
         {(data) => (
-          <main class="flex flex-col gap-4 bg-purple2 w-full font-rijksoverheid text-center grow">
+          <main class="flex flex-col gap-4 bg-purple2 w-full font-rijksoverheid grow">
             <header class="bg-purple1 text-white">
-              <h1 class="px-8 py-4 text-xl">
+              <h1 class="px-6 py-4 text-xl">
                 <Marked data={data().question.text} />
               </h1>
             </header>
 
+            <Show when={data().question.text2}>
+              {(text2) => (
+                <h2 class="px-10 text-purple1">
+                  <Marked data={text2()} />
+                </h2>
+              )}
+            </Show>
+
             <form
-              class="flex flex-col gap-4 mb-4 text-purple1 grow"
+              class="flex flex-col gap-4 mb-4 px-10 text-purple1 grow"
               method="post"
             >
               <div class="grow">
-                <Switch fallback={<p>not implemented yet..</p>}>
-                  <Match when={data().answer.type === "multiple"}>
-                    <MultipleFormControl
-                      answer={data().answer}
-                      onValidate={setIsvalid}
-                    />
-                  </Match>
-                </Switch>
+                <FormControl
+                  answer={() => data().answer}
+                  onValidate={setIsvalid}
+                />
               </div>
 
               <Show when={data().links.next}>

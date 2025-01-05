@@ -13,11 +13,17 @@
           },
           {
             "text": "Wat is een Nederlandse Nationaliteit?",
-            "errorImageUrl": "/images/image2.jpg"
+            "error": {
+              "imageUrls": ["/images/image2.jpg"],
+              "effect": "blink"
+            }
           },
           {
             "text": "Wat schuift ‘t?",
-            "errorImageUrl": "/images/image3.jpg"
+            "error": {
+              "imageUrls": ["/images/image3.jpg"],
+              "effect": "blink"
+            }
           }
         ]
       },
@@ -29,15 +35,239 @@
 
     {
       "question": {
-        "text": "**Wat fijn dat U wilt helpen! U helpt haar enorm door deze vragenlijst in te vullen! Deze vragen zijn makkelijker te beantwoorden met behulp van de documenten in de archiefmap.**"
+        "text": "**Wat fijn dat U wilt helpen! U helpt haar enorm door deze vragenlijst in te vullen! Deze vragen zijn makkelijker te beantwoorden met behulp van de documenten in de archiefmap.**",
+        "text2": "**Wat doet de Immigratie- en Naturalisatiedienst? (IND)**"
       },
 
       "answer": {
-        "type": "multiple"
+        "type": "multiple",
+        "options": [
+          {
+            "text": "Het organiseren van een jaarlijkse talentenjacht voor aspirant- Nederlanders, met als hoofdprijs een verblijfsvergunning.",
+            "error": {
+              "imageUrls": ["/images/image4.jpg"],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Het beheren van een geheim archief met alle mislukte inburgeringsexamens voor toekomstig historisch onderzoek.",
+            "error": {
+              "imageUrls": ["/images/image4.jpg"],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Het beoordelen van aanvragen voor verblijf en Nederlanderschap, maar alleen op dagen dat de koffiemachine werkt."
+          }
+        ]
       },
 
       "links": {
         "next": "/question/3"
+      }
+    },
+
+    {
+      "question": {
+        "text": "Lola kreeg in 2017, toen zij 22 jaar oud was, te horen dat haar Nederlandschap werd ingetrokken wegens een missend document. Voor haar begon op dat moment een stressvolle periode.",
+        "text2": "**Op een schaal van 1 tot 10, hoe hoog denkt u dat het stressniveau is voor iemand die op 22-jarige leeftijd door dit proces gaat?**"
+      },
+
+      "answer": {
+        "type": "text",
+        "options": ["10"],
+        "error": {
+          "effect": "random",
+          "imageUrls": [
+            "/images/image5.jpg",
+            "/images/image6.webp",
+            "/images/image7.jpg",
+            "/images/image8.jpg"
+          ]
+        }
+      },
+
+      "links": {
+        "next": "/question/4"
+      }
+    },
+
+    {
+      "question": {
+        "text": "Lola heeft contact gezocht met een advocate. De advocate gebruikte bepaalde taal die niet altijd duidelijk was. Help Lola te ontcijferen wat er bedoeld werd. (Zie document 3 in de map)",
+        "text2": "**Wat betekend: “Inspanningen van een advocaat alleen volstaan helaas niet. Je zult daarom ook persoonlijk actie moeten ondernemen.”**"
+      },
+
+      "answer": {
+        "type": "multiple",
+        "options": [
+          {
+            "text": "Huur een detective in voor hulp.",
+            "error": {
+              "imageUrls": ["/images/image9.jpg"],
+              "effect": "static",
+              "duration": 300
+            }
+          },
+          {
+            "text": "Werk actief mee aan je zaak."
+          },
+          {
+            "text": "Oefen overtuigende puppy-oogjes voor rechtszaak.",
+            "error": {
+              "imageUrls": ["/images/image9.jpg"],
+              "effect": "static",
+              "duration": 300
+            }
+          },
+          {
+            "text": "Bak koekjes om iedereen te imponeren.",
+            "error": {
+              "imageUrls": ["/images/image9.jpg"],
+              "effect": "static",
+              "duration": 300
+            }
+          }
+        ]
+      },
+
+      "links": {
+        "next": "/question/5"
+      }
+    },
+
+    {
+      "question": {
+        "text": "Voor afstand van Lola’s oude nationaliteit heeft zij een aantal specifieke documenten nodig. Selecteer welke documenten zij moet klaarleggen voor de aanvraag. (Zie documenten in archiefmap)",
+        "text2": "**De volgende documenten heeft Lola nodig voor de aanvraag:**"
+      },
+
+      "answer": {
+        "type": "multiple",
+        "options": [
+          {
+            "text": "Document 2, 3 en 6 *Diploma, lasagna recept en paspoort*.",
+            "error": {
+              "imageUrls": [
+                "/images/image2.jpg",
+                "/images/image3.jpg",
+                "/images/image4.jpg",
+                "/images/image5.jpg",
+                "/images/image6.webp",
+                "/images/image7.jpg",
+                "/images/image8.jpg",
+                "/images/image9.jpg"
+              ],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Document 5, 6 en 9 *Paspoort, geboorteakte en persoonlijke uitnodiging van de koning*.",
+            "error": {
+              "imageUrls": [
+                "/images/image2.jpg",
+                "/images/image3.jpg",
+                "/images/image4.jpg",
+                "/images/image5.jpg",
+                "/images/image6.webp",
+                "/images/image7.jpg",
+                "/images/image8.jpg",
+                "/images/image9.jpg"
+              ],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Document 3, 4 en 7 *Afstand van oude nationaliteit ondertekend door de ambassade, paspoort en geboorteakte*."
+          }
+        ]
+      },
+
+      "links": {
+        "next": "/question/6"
+      }
+    },
+
+    {
+      "question": {
+        "text": "Vind de handgeschreven notitie in de archiefmap die Lola aan zichzelf schreef tijdens de frustrerende communicatie met de advocaat. Welke emotie overheerst in deze notitie?",
+        "text2": "**Selecteer de juiste emoties.**"
+      },
+
+      "answer": {
+        "type": "multiple",
+        "options": [
+          {
+            "text": "Blij, energiek en extatisch.",
+            "error": {
+              "imageUrls": [
+                "/images/image2.jpg",
+                "/images/image3.jpg",
+                "/images/image4.jpg",
+                "/images/image5.jpg",
+                "/images/image6.webp",
+                "/images/image7.jpg",
+                "/images/image8.jpg",
+                "/images/image9.jpg"
+              ],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Gelukkig, geraakt en nieuwsgierig.",
+            "error": {
+              "imageUrls": [
+                "/images/image2.jpg",
+                "/images/image3.jpg",
+                "/images/image4.jpg",
+                "/images/image5.jpg",
+                "/images/image6.webp",
+                "/images/image7.jpg",
+                "/images/image8.jpg",
+                "/images/image9.jpg"
+              ],
+              "effect": "random"
+            }
+          },
+          {
+            "text": "Machteloos, verward en geirriteerd."
+          },
+          {
+            "text": "Uitgelaten, verbaasd en nerveus.",
+            "error": {
+              "imageUrls": [
+                "/images/image2.jpg",
+                "/images/image3.jpg",
+                "/images/image4.jpg",
+                "/images/image5.jpg",
+                "/images/image6.webp",
+                "/images/image7.jpg",
+                "/images/image8.jpg",
+                "/images/image9.jpg"
+              ],
+              "effect": "random"
+            }
+          }
+        ]
+      },
+
+      "links": {
+        "next": "/question/6"
+      }
+    },
+
+    {
+      "question": {
+        "text": "Bedankt voor uw hulp! Lola is blij met de resultaten en zal zo snel mogelijk de aanvraag indienen. Graag horen we nog wat u vond van de vragenlijst en de documenten.",
+        "text2": "**Als u vragen of opmerkingen hebt horen wij dit graag!**"
+      },
+
+      "answer": {
+        "type": "email"
+      },
+
+      "links": {
+        "next": "/bedankt"
       }
     }
   ]

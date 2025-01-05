@@ -45,8 +45,6 @@ export default function HomePage() {
         <Show when={question()}>
           {(data) => (
             <>
-              <span class="bg-purple1 text-white">asdads</span>
-
               <div class="flex flex-col items-center gap-4 w-full md:max-w-1/2 text-center">
                 <div>{data().question}</div>
 
@@ -58,7 +56,6 @@ export default function HomePage() {
                     name="user_input"
                     class="px-4 py-2 rounded w-full b-2 b-min b-solid"
                     placeholder="Vul hier je antwoord in"
-                    value={data().answer}
                     type="text"
                   />
 

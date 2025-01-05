@@ -1,6 +1,7 @@
 import { createSignal, For, Show } from "solid-js";
-import { BlinkImageEffect } from "~/components/image-effects/blink-image.tsx";
-import { MultipleAnswer } from "~/models.ts";
+import { ImageEffect } from "~/components/image-effect.tsx";
+import { Marked } from "~/components/marked.tsx";
+import { AnswerError, MultipleAnswer } from "~/models.ts";
 
 type Props = {
   answer: MultipleAnswer;
@@ -8,41 +9,39 @@ type Props = {
 };
 
 export const MultipleFormControl = ({ answer, onValidate }: Props) => {
-  const [errorImage, setErrorImage] = createSignal<string>();
+  const [error, setError] = createSignal<AnswerError>();
 
   const handleValueChange = (
-    { errorImageUrl }: MultipleAnswer["options"][number],
+    { error }: MultipleAnswer["options"][number],
   ) => {
-    onValidate(!errorImageUrl);
+    onValidate(!error);
 
-    if (!errorImageUrl) {
+    if (!error) {
       return;
     }
 
-    setErrorImage(`/site-umarova/${errorImageUrl}`);
-    setTimeout(() => setErrorImage(undefined), 3000);
+    setError(error);
+    setTimeout(() => setError(undefined), error.duration ?? 3000);
   };
 
   return (
     <>
-      <div class="flex flex-col justify-start">
+      <div class="flex flex-col justify-start gap-4">
         <For each={answer.options}>
           {(option) => (
-            <label>
+            <label class="flex flex-row items-baseline gap-2">
               <input
                 type="radio"
                 name="test"
                 onchange={() => handleValueChange(option)}
               />
-              <span>{option.text}</span>
+              <Marked data={option.text} />
             </label>
           )}
         </For>
       </div>
 
-      <Show when={errorImage()}>
-        {(src) => <BlinkImageEffect src={src()} />}
-      </Show>
+      <Show when={error()}>{(data) => <ImageEffect error={data()} />}</Show>
     </>
   );
 };

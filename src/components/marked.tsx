@@ -5,5 +5,5 @@ type Props = {
 };
 
 export const Marked = ({ data }: Props) => {
-  return <span innerHTML={parse(data).toString()} />;
+  return <span class="inline-block" innerHTML={parse(data).toString()} />;
 };
