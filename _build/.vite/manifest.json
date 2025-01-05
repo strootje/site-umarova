@@ -81,7 +81,7 @@
     ]
   },
   "src/routes/(pages)/question/[...id].tsx?pick=default&pick=$css": {
-    "file": "assets/_...id_-D88Bhvp0.js",
+    "file": "assets/_...id_-DNbEe_lp.js",
     "name": "_...id_",
     "src": "src/routes/(pages)/question/[...id].tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -94,7 +94,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-5qNe--px.js",
+    "file": "assets/client-DoXkLQ2L.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
