@@ -1,4 +1,10 @@
-import { action, query, redirect, useParams } from "@solidjs/router";
+import {
+  action,
+  query,
+  redirect,
+  useNavigate,
+  useParams,
+} from "@solidjs/router";
 import { createResource, createSignal, Show, Suspense } from "solid-js";
 import { FormControl } from "~/components/form-control.tsx";
 import { Marked } from "~/components/marked.tsx";
@@ -20,14 +26,16 @@ export default function QuestionByIdPage() {
     return questions.at(Number.parseInt(id) - 1);
   });
 
+  const navigate = useNavigate();
   const [isValid, setIsvalid] = createSignal(false);
   const handleSubmit = action(async (next: string) => {
     console.log("submit", "valid", isValid(), next);
     if (isValid()) {
+      navigate(next, { resolve: false });
       return redirect(next);
     }
 
-    return Promise.resolve();
+    return;
   });
 
   return (
