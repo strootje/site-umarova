@@ -7,9 +7,10 @@ import { Answer, MultipleAnswer, TextAnswer } from "~/models.ts";
 type Props = {
   answer: Accessor<Answer>;
   onValidate: (valid: boolean) => void;
+  handleSubmit: (action: () => Promise<void>) => void;
 };
 
-export const FormControl = ({ answer, onValidate }: Props) => {
+export const FormControl = ({ answer, onValidate, handleSubmit }: Props) => {
   return (
     <Switch fallback={<p>not implemented yet..</p>}>
       <Match when={answer().type === "multiple"}>
@@ -28,8 +29,8 @@ export const FormControl = ({ answer, onValidate }: Props) => {
 
       <Match when={answer().type === "email"}>
         <EmailFormControl
-          answer={answer() as TextAnswer}
           onValidate={onValidate}
+          handleSubmit={handleSubmit}
         />
       </Match>
     </Switch>

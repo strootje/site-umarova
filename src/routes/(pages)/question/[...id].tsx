@@ -28,7 +28,9 @@ export default function QuestionByIdPage() {
 
   const navigate = useNavigate();
   const [isValid, setIsvalid] = createSignal(false);
+  const [extraSubmit, setExtraSubmit] = createSignal(() => Promise.resolve());
   const handleSubmit = action(async (next: string) => {
+    await extraSubmit()();
     console.log("submit", "valid", isValid(), next);
     if (isValid()) {
       navigate(next, { resolve: false });
@@ -65,6 +67,7 @@ export default function QuestionByIdPage() {
                 <FormControl
                   answer={() => data().answer}
                   onValidate={setIsvalid}
+                  handleSubmit={(action) => setExtraSubmit(() => action)}
                 />
               </div>
 
