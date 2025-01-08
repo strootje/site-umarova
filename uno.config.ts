@@ -16,12 +16,12 @@ export default defineConfig({
       provider: "none",
 
       fonts: {
-        rijksoverheid: "arial",
+        rijksoverheid: "RO-SansWebText-Regular",
       },
 
       processors: createLocalFontProcessor({
         fontAssetsDir: "public/assets/fonts",
-        fontServeBaseUrl: "/assets/fonts",
+        fontServeBaseUrl: "/site-umarova/assets/fonts",
       }),
     }),
   ],
