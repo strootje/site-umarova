@@ -6,7 +6,7 @@ export const Header = () => {
       </div>
 
       <div class="flex flex-col justify-end mb-6 font-ro text-3 select-none line-height-tight">
-        <h1>Ingevroren- Noodel Draagtas</h1>
+        <h1>Ingevroren- Noedel Draagtas</h1>
         <span class="font-italic">
           Ministerie van Jodelen en Vingerverf
         </span>
