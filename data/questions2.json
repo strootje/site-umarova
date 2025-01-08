@@ -94,15 +94,15 @@
 
     {
       "question": {
-        "text": "Lola heeft contact gezocht met een advocate. De advocate gebruikte bepaalde taal die niet altijd duidelijk was. Help Lola te ontcijferen wat er bedoeld werd. (Zie document 3 in de map)",
-        "text2": "**Wat betekend: “Inspanningen van een advocaat alleen volstaan helaas niet. Je zult daarom ook persoonlijk actie moeten ondernemen.”**"
+        "text": "Lola heeft contact gezocht met een advocate. De advocate gebruikte bepaalde taal die niet altijd duidelijk was in het bezwaarschrift. Help Lola te begrijpen wat zij hier schreef. (Document 15 in de map)",
+        "text2": "**Wat betekend “Zij is goed ingeburgerd en voelt zich Nederlandse.”**"
       },
 
       "answer": {
         "type": "multiple",
         "options": [
           {
-            "text": "Huur een detective in voor hulp.",
+            "text": "Ze eet nu drop zonder te huilen en noemt het zelfs lekker.",
             "error": {
               "imageUrls": ["/images/image9.jpg"],
               "effect": "static",
@@ -110,10 +110,7 @@
             }
           },
           {
-            "text": "Werk actief mee aan je zaak."
-          },
-          {
-            "text": "Oefen overtuigende puppy-oogjes voor rechtszaak.",
+            "text": "Ze heeft de kunst van klagen over het weer en fietsen in de regen volledig onder de knie.",
             "error": {
               "imageUrls": ["/images/image9.jpg"],
               "effect": "static",
@@ -121,7 +118,10 @@
             }
           },
           {
-            "text": "Bak koekjes om iedereen te imponeren.",
+            "text": "Ze is goed geïntegreerd in de Nederlandse samenleving en voelt zich onderdeel van de cultuur."
+          },
+          {
+            "text": "Ze staat om 6 uur ’s ochtends op om tulpen te tellen.",
             "error": {
               "imageUrls": ["/images/image9.jpg"],
               "effect": "static",
@@ -178,7 +178,7 @@
             }
           },
           {
-            "text": "Document 3, 4 en 7 *Afstand van oude nationaliteit ondertekend door de ambassade, paspoort en geboorteakte*."
+            "text": "Document 18, 6 en 2 *Afstand van oude nationaliteit ondertekend door de ambassade, paspoort en geboorteakte*."
           }
         ]
       },
