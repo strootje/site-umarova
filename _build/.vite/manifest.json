@@ -94,7 +94,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-DCPmUoE6.js",
+    "file": "assets/client-1PjUeMPd.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
@@ -111,7 +111,7 @@
       "src/routes/(pages)/question/[...id].tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-BCCmiqeu.css"
+      "assets/client-fBta8Sk-.css"
     ]
   }
 }
