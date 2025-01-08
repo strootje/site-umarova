@@ -34,7 +34,7 @@
     "name": "web"
   },
   "src/routes/(pages).tsx?pick=default&pick=$css": {
-    "file": "assets/(pages)-CzFZzeth.js",
+    "file": "assets/(pages)-CDdUzk3n.js",
     "name": "(pages)",
     "src": "src/routes/(pages).tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -94,7 +94,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-1PjUeMPd.js",
+    "file": "assets/client-J-__O83_.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
